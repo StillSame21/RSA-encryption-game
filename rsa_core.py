@@ -25,7 +25,6 @@ def factor_n(n):
     for i in range(2, int(math.isqrt(n)) + 1):
         if n % i == 0:
             p, q = i, n // i
-            # Verify both factors are prime, as slide step 1 demands.
             if not (is_prime(p) and is_prime(q)):
                 raise ValueError(f"n={n} is not a product of two primes")
             return p, q
